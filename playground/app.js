@@ -170,58 +170,56 @@
 
 // Destructuring - (Array & Objects)
 
-let volume = {
-    drawText: text => console.log("Drawing " + text),
-    drawCircle: r => console.log(Math.PI * r * r),
-    drawRect: (w, l) => console.log(2 * w * l)
-}
+// let volume = {
+//     drawText: text => console.log("Drawing " + text),
+//     drawCircle: r => console.log(Math.PI * r * r),
+//     drawRect: (w, l) => console.log(2 * w * l)
+// }
 
-let { drawCircle: dc, drawRect: dr, drawText: dt } = volume;
-dc(5);
+// let { drawCircle: dc, drawRect: dr, drawText: dt } = volume;
+// dc(5);
 // drawCircle(5);
 // drawText("Hello World");
 
-let arr = ["foo", "bar", "bam", "bas"];
+// let arr = ["foo", "bar", "bam", "bas"];
 
-let [arr1, arr3, arr4] = arr;
+// let [arr1, arr3, arr4] = arr;
 
-console.log(arr3);          // ?
+// console.log(arr3);          // ?
 
-arr3 = "BAZ";
+// arr3 = "BAZ";
 
-let newArr = arr;
+// let newArr = arr;
 
-newArr.push("BAZ");
+// newArr.push("BAZ");
 
-console.log(arr);           //  ["foo", "BAZ"]
-
-
-
-
-let person = {
-    firstname : "Foo",
-    friends : ["Bar", "Bam", "Baz"],
-    address : {
-        street : "201, Main Road",
-        city : "Chennai"
-    }
-}
+// console.log(arr);           //  ["foo", "BAZ"]
 
 
 
 
+// let person = {
+//     firstname: "Foo",
+//     friends: ["Bar", "Bam", "Baz"],
+//     address: {
+//         street: "201, Main Road",
+//         city: "Chennai"
+//     }
+// }
 
+// let {
+//     firstname: fn,
+//     friends: [f1, f2, f3],
+//     address: {
+//         street: st,
+//         city: ct
+//     }
+// } = person;
 
+// let { address } = person;
+// let {street : st, city : ct} = address;
 
-
-
-
-
-
-
-
-
-// Spread & Rest operators
+// console.log(ct, f2);
 
 
 
@@ -235,11 +233,42 @@ let person = {
 
 
 
-// Decorators
-// Classes & Inheritance
-// Module system
 
-// Additional types
+// Spread & Rest operators (...)
+
+
+// let arr = [3, 4, 5];
+// let newArr = [1, 2, ...arr, 6, 7];
+
+// console.log(newArr);            // ?
+
+// let names = ["Foo", "bar", "bam"];
+
+// let newNames = [...names, "Baz"];
+
+// console.log(names, newNames);
+
+
+// function demo(fname, ...args){
+//     console.log(args[0]);      // bar
+// }
+
+// demo("foo")
+// demo("foo", "bar")
+// demo("foo", "bar", 32)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

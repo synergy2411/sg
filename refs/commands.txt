@@ -1,1 +1,15 @@
 https://github.com/synergy2411/sg
+
+node version > 10.x
+npm version > 6x
+
+> npm install -g typescript
+> npm install -g @angular/cli@7
+> npm install -g @angular/cli
+
+> ng --version
+
+> ng new <project_name>
+> ng new users-app
+> cd users-app
+> ng serve
