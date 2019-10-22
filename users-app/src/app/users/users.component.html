@@ -1,16 +1,20 @@
 <div class="container">
   <p class="text-primary text-center display-4">{{ title }} </p>
-  <div class="card">
-    <div class="card-body">
+  <div class="card"  appBetterHighlight [mycolor] = "'lightgrey'"
+    *ngFor="let user of users; index as i; first as isFirst; even as isEven;">
+    <div class="card-body" >
       <div class="row">
         <div class="col-sm-4 col-md-4">
+          <!-- Index : {{ i }} <br>
+          Is this First ? {{ isFirst }} <br>
+          Is this Even ? {{ isEven }} -->
           <app-user-img [user]="user" (childEvent)="onMoreInfo($event)"></app-user-img>
         </div>
         <div class="col-sm-8 col-md-8">
           <app-user-info [user]="user">
-            <header>Header Info</header>
+            <!-- <header>Header Info</header>
             <main class="contents">Main Contents</main>
-            <footer>Footer Info</footer>
+            <footer>Footer Info</footer> -->
           </app-user-info>
         </div>
       </div>

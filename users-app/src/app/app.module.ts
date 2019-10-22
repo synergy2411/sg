@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { UserInfoComponent } from './users/user-info/user-info.component';
 import { UserImgComponent } from './users/user-img/user-img.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { NationalCodePipe } from './pipes/national-code.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     UserInfoComponent,
-    UserImgComponent
+    UserImgComponent,
+    HighlightDirective,
+    BetterHighlightDirective,
+    PipeDemoComponent,
+    NationalCodePipe
   ],
   imports: [
     BrowserModule,

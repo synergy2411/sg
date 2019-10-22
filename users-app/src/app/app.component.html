@@ -1,8 +1,15 @@
-
 <!-- Title : {{ title }}
 <input type="text" [(ngModel)] = "title" /> -->
 
 <!-- <button class="btn btn-danger"
   (click) = "showUsers = !showUsers">Toggle the Users</button> -->
 
-<app-users [title] = "title" *ngIf="showUsers"></app-users>
+<h2>This is App Component!</h2>
+
+<br>
+<br>
+<app-pipe-demo></app-pipe-demo>
+<br>
+<hr>
+
+<app-users [title]="title" *ngIf="showUsers"></app-users>
