@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { IUser } from '../model/user';
 
 @Component({
   selector: 'app-users',
   templateUrl : `./users.component.html`
 })
 export class UsersComponent {
-  user = {
+  user : IUser = {
     firstName: "Bill",
     lastName: "Gates",
     dob: new Date("Dec 21, 1965"),
@@ -16,7 +17,7 @@ export class UsersComponent {
     image : "https://image.cnbcfm.com/api/v1/image/104891709-Bill_Gates_the_co-Founder.jpg?v=1558120888&w=1400&h=950"
   }
 
-  onMoreInfo(user : any){
+  onMoreInfo(user : IUser ){
     alert(`${user.firstName} is working with ${user.company}!!`);
   }
 }

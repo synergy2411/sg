@@ -12,4 +12,5 @@ npm version > 6x
 > ng new <project_name>
 > ng new users-app
 > cd users-app
-> ng serve
+> ng serve 
+> npm install bootstrap --save
