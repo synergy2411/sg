@@ -14,3 +14,9 @@ npm version > 6x
 > cd users-app
 > ng serve 
 > npm install bootstrap --save
+> ng generate component users/user-info
+> ng g c users/user-img
+> ng g d
+> ng g p
+> ng g m
+> ng g s

@@ -4,12 +4,14 @@ import {
   AfterViewChecked, OnDestroy, Input, SimpleChanges
 } from '@angular/core';
 import { IUser } from '../model/user';
-import { USER_DATA } from '../model/mocks';
+import { DataService } from '../services/data.service';
+// import { USER_DATA } from '../model/mocks';
 
 @Component({
   selector: 'app-users',
   templateUrl: `./users.component.html`,
-  styleUrls : [`./users.component.css`]
+  styleUrls : [`./users.component.css`],
+  // providers : [DataService]
 })
 export class UsersComponent
   // implements OnChanges,
@@ -26,8 +28,21 @@ export class UsersComponent
 
   users: IUser[];
 
+  constructor(public dataService : DataService){}
+
+  onIncrease(){
+    this.dataService.counter++;
+  }
+
   ngOnInit() {
-    this.users = USER_DATA;
+    // this.users = USER_DATA;
+    // this.users = this.dataService.getData();
+    this.dataService.getRemoteData()
+      .subscribe(response => {
+        this.users = <IUser[]>response['userdata'];
+      },
+      err => console.log(err),
+      () => console.log("Completion"),);
    }
 
   onMoreInfo(user: IUser) {

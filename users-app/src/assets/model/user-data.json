@@ -1,0 +1,34 @@
+{
+  "userdata": [
+    {
+      "firstName": "Bill",
+      "lastName": "Gates",
+      "dob": "1965-12-20T18:30:00.000Z",
+      "income": 50000,
+      "isWorking": true,
+      "company": "Microsoft",
+      "votes": 120,
+      "image": "https://image.cnbcfm.com/api/v1/image/104891709-Bill_Gates_the_co-Founder.jpg?v=1558120888&w=1400&h=950"
+    },
+    {
+      "firstName": "Steve",
+      "lastName": "Jobs",
+      "dob": "1965-08-01T18:30:00.000Z",
+      "income": 0,
+      "isWorking": false,
+      "company": "Apple",
+      "votes": 190,
+      "image": "https://addicted2success.com/wp-content/uploads/2017/11/10-Things-We-Can-Learn-From-the-Incredible-Steve-Jobs.jpg"
+    },
+    {
+      "firstName": "Tim B.",
+      "lastName": "Lee",
+      "dob": "1964-12-31T18:30:00.000Z",
+      "income": 40000,
+      "isWorking": true,
+      "company": "World Wide Web",
+      "votes": 110,
+      "image": "https://timedotcom.files.wordpress.com/2014/11/tbl.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-md-8 offset-sm-1 offset-md-2">
+
+      <p class="text-center text-outline-success display-3">
+        Register Form
+      </p>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <div class="form-group">
+          <label for="email">Email : </label>
+          <input type="email" name="email" placeholder="Enter Email" class="form-control" [formControl]="username">
+
+          <div [hidden]="username.valid || username.untouched" class="alert alert-danger">
+            <p>Some Problem with Username.</p>
+            <div [hidden]="!username.hasError('required')">
+              <p>Username is mandatory field.</p>
+            </div>
+            <div [hidden]="!username.hasError('email')">
+              <p>Username should be in email format.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <label for="password">Password : </label>
+          <input type="password" name="password" placeholder="Enter Password" class="form-control"
+            [formControl]="password">
+
+          <div [hidden]="password.valid || password.untouched" class="alert alert-danger">
+            <p>Some Problem with password.</p>
+            <div [hidden]="!password.hasError('required')">
+              <p>Password is mandatory field.</p>
+            </div>
+            <div [hidden]="!password.hasError('minlength')">
+              <p>Password should be 6 characters long.</p>
+            </div>
+            <div [hidden]="!password.hasError('needExclamation')">
+              <p>Password must contain Exclamation Mark.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cnfPassword"> Confirm Password : </label>
+          <input type="password" name="cnfPassword" class="form-control" [formControl]="cnfPassword"
+            placeholder="Confirm Password">
+          <div [hidden]="cnfPassword.valid || cnfPassword.untouched" class="alert alert-danger">
+            <div [hidden]="!cnfPassword.hasError('duplicatePassword')">
+              <p>Password and Confirm Password should match.</p>
+            </div>
+            <div [hidden]="!cnfPassword.hasError('required')">
+              <p>Confirm Password is mandatory field.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+              <label for="gender">Hobbies : </label>
+            </div>
+            <div class="col-sm-6 col-md-6">
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="sports" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Sports
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="books" id="defaultCheck2">
+                <label class="form-check-label" for="defaultCheck2">
+                  Books
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <button type="submit" [disabled]="!registerForm.valid"
+            class="btn btn-block btn-outline-success">Register</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
