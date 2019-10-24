@@ -39,7 +39,8 @@ export class UsersComponent
     // this.users = this.dataService.getData();
     this.dataService.getRemoteData()
       .subscribe(response => {
-        this.users = <IUser[]>response['userdata'];
+        // this.users = <IUser[]>response['userdata'];
+        this.users = <IUser[]>response;
       },
       err => console.log(err),
       () => console.log("Completion"),);

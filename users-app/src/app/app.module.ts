@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
+import { EmployeeModule } from './employee/employee.module';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
@@ -16,6 +18,14 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { DataService } from './services/data.service';
 import { ObservableDemoComponent } from './observable-demo/observable-demo.component';
+import { AuthService } from './services/auth.service';
+import { APP_ROUTES } from './app.routes';
+import { HeaderComponent } from './header/header.component';
+import { LoginGaurdService } from './services/login-gaurd.service';
+import { ProductComponent } from './product/product.component';
+import { OverviewComponent } from './product/overview/overview.component';
+import { SpecificationComponent } from './product/specification/specification.component';
+import { ChatService } from './chat/chat.service';
 
 @NgModule({
   declarations: [
@@ -30,15 +40,21 @@ import { ObservableDemoComponent } from './observable-demo/observable-demo.compo
     FilterPipe,
     LoginComponent,
     RegisterComponent,
-    ObservableDemoComponent
+    ObservableDemoComponent,
+    HeaderComponent,
+    ProductComponent,
+    OverviewComponent,
+    SpecificationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
+    EmployeeModule
   ],
-  providers: [DataService],
+  providers: [DataService, AuthService, LoginGaurdService, ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

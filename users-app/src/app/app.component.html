@@ -1,27 +1,52 @@
+<div class="container">
+  <app-header></app-header>
+
+  <br>
+  <p class="display-2 text-center">The Users App</p>
+  <br>
+
+  <app-new-employee></app-new-employee>
+
+  <hr>
+  <router-outlet></router-outlet>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Title : {{ title }}
 <input type="text" [(ngModel)] = "title" /> -->
 
 <!-- <button class="btn btn-danger"
   (click) = "showUsers = !showUsers">Toggle the Users</button> -->
 
-<h2>This is App Component!</h2>
-
 <!-- <h3>Counter in App : {{ dataService.counter }}</!-->
 <!-- <button class="btn btn-default" (click)="onIncrease()">Increase</!-->
 
 
-<br>
-<br>
 
-<app-observable-demo></app-observable-demo>
+<!-- <app-observable-demo></app-observable-demo> -->
 
 <!-- <app-pipe-demo></app-pipe-demo> -->
 
 <!-- <app-login></app-login> -->
 
-<!-- <app-register></app-register>
+<!-- <app-register></app-register> -->
 
-<br>
-<hr> -->
-
-<app-users [title]="title" *ngIf="showUsers"></app-users>
+<!-- <app-users [title]="title" *ngIf="authService.isAuthenticated()"></app-users> -->
