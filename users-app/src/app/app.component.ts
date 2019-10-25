@@ -1,7 +1,8 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, OnInit, ChangeDetectorRef } from '@angular/core';
 import { DataService } from './services/data.service';
 import * as firebase from 'firebase';
 import { AuthService } from './services/auth.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,14 @@ export class AppComponent implements OnInit {
   title = 'My Awesome App';
   showUsers : boolean = true;
 
-  constructor(public dataService : DataService,
-              public authService : AuthService){
+  showAlert : string = "Template - <script>alert('Hello World')</script>"
 
+  constructor(public dataService : DataService,
+              public authService : AuthService,
+              private sanitizer : DomSanitizer,
+              private cdRef : ChangeDetectorRef){
+                // this.sanitizer.
+                
   }
   ngOnInit(){
     firebase.initializeApp({

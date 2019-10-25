@@ -2,11 +2,15 @@
   <app-header></app-header>
 
   <br>
-  <p class="display-2 text-center">The Users App</p>
-  <br>
+  <p class="display-2 text-center">The Awesome Users App</p>
+   <!-- <app-new-employee></app-new-employee> -->
 
-  <app-new-employee></app-new-employee>
+  <!-- <a (click) = "" >Click Me</a> -->
 
+  <p [innerHTML] = "showAlert">Showing here Script tag</p>
+  <p>{{ 3 + 3}}</p>
+   <br>
+   <app-counter></app-counter>
   <hr>
   <router-outlet></router-outlet>
 

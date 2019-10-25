@@ -15,8 +15,23 @@ npm version > 6x
 > ng serve 
 > npm install bootstrap --save
 > ng generate component users/user-info
+> ng g c auth/login --skipTests
 > ng g c users/user-img
 > ng g d
 > ng g p
+	> ng g p pipes/filter --skipTests
 > ng g m
 > ng g s
+
+
+> npm install firebase --save
+
+> npm install jquery --save
+
+> npm install @ngrx/store --save
+> npm install @ngrx/store-devtools --save-dev
+> npm install serve -g
+> cd dist/users-app
+> serve (http://localhost:5000)
+
+synergy2411@outlook.com
